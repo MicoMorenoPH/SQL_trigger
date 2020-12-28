@@ -55,10 +55,10 @@ BEGIN
     END
 
     IF @ACTION = 'U'
-		BEGIN
-				 INSERT INTO dbo.productLogs( docentry, name, operation )
-				 SELECT id,name,'UP' FROM inserted
-		END
+    BEGIN
+	 INSERT INTO dbo.productLogs( docentry, name, operation )
+	 SELECT id,name,'UP' FROM inserted
+    END
 
     IF @ACTION = 'D'
     BEGIN
