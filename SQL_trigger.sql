@@ -63,7 +63,7 @@ BEGIN
     IF @ACTION = 'D'
     BEGIN
          INSERT INTO dbo.productLogs( docentry, name, operation )
-         SELECT id,name,'DEL' FROM inserted
+         SELECT id,name,'DEL' FROM deleted
     END
 
 END
